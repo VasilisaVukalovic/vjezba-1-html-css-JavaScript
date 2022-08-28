@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Planete</title>
+    <link rel="stylesheet" href="zadatak.css" />
+    <script src="zadatak.js"></script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Planeta</th>
+        <th>Udaljenost od Sunca (u milionima kilometara)</th>
+        <th colspan="2">Više o planeti</th>
+      </tr>
+      <tr>
+        <td>Merkur</td>
+        <td>46</td>
+        <td
+          colspan="2"
+          class="linkRow"
+          onclick="odrediPrikazOpisaPlanete('merkur')"
+        >
+          Merkur
+        </td>
+      </tr>
+      <tr>
+        <td>Venera</td>
+        <td>107</td>
+        <td
+          colspan="2"
+          class="linkRow"
+          onclick="odrediPrikazOpisaPlanete('venera')"
+        >
+          Venera
+        </td>
+      </tr>
+      <tr>
+        <td>Zemlja</td>
+        <td>147</td>
+        <td
+          colspan="2"
+          class="linkRow"
+          onclick="odrediPrikazOpisaPlanete('zemlja')"
+        >
+          Zemlja
+        </td>
+      </tr>
+      <tr>
+        <td>Mars</td>
+        <td>205</td>
+        <td
+          colspan="2"
+          class="linkRow"
+          onclick="odrediPrikazOpisaPlanete('mars')"
+        >
+          Mars
+        </td>
+      </tr>
+    </table>
+
+    <div class="loginForm">
+      <form onsubmit="checkForm()">
+        <label>Korisničko ime:</label><br />
+        <input type="text" placeholder="Username" /><br /><br />
+
+        <label>Lozinka:</label><br />
+        <input
+          id="password"
+          type="password"
+          placeholder="Password"
+        /><br /><br />
+
+        <label>Omiljena planeta:</label><br />
+        <select
+          name="omiljenaPlaneta"
+          onchange="prikaziTekstZaOmiljenuPlanetu(this)"
+        >
+          <option value="merkur">Merkur</option>
+          <!--poklapa se value sa id od diva -->
+          <option value="venera">Venera</option>
+          <option value="zemlja">Zemlja</option>
+          <option value="mars">Mars</option></select
+        ><br /><br />
+
+        <label>Koliko satelita ima Jupiter? </label><br />
+        <label><input type="radio" name="brojSatelita" />0</label><br />
+        <label><input type="radio" name="brojSatelita" />1</label><br />
+        <label><input type="radio" name="brojSatelita" />15</label><br />
+        <label><input type="radio" name="brojSatelita" />31</label><br />
+        <label><input type="radio" name="brojSatelita" />79</label><br />
+        <label><input type="radio" name="brojSatelita" />114</label
+        ><br /><br /><br />
+
+        <input type="submit" value="Prijavi se" />
+      </form>
+    </div>
+
+    <div class="planeteOpisi">
+      <div id="merkur" class="divPlanets" hidden>
+        Меркур је најмања, а уједно и најближа планета Сунцу и једна од 8
+        планета у Сунчевом систему, чији орбитални период траје око 89 земаљских
+        дана. Гледано са Земље, Меркуру је потребно скоро 116 дана да направи
+        један пуни круг око своје орбите, што је много брже него код и једне
+        друге планете. Управо ова брзина револуције Меркура је и била разлог
+        због којег је та планета добила име по староримском богу трговине и
+        путовања и гласнику богова Меркуру (лат. Mercurius; грчки еквивалент је
+        Хермес).
+      </div>
+      <div id="venera" class="divPlanets" hidden>
+        Венера је једна од 8 планета Сунчевог система и друга је планета по
+        удаљености од Сунца, са просечном удаљеношћу од око 0,72 АЈ (или
+        108.200.000 km). Око Сунца се креће готово кружном орбитом, а једну
+        ротацију обави за 224,7 земаљских дана. Нема природних сателита у својој
+        орбити. Друго је по сјају небеско тело на ноћном небу гледано са Земље,
+        одмах после Месеца, са вредностима привидне магнитуде од -4,9 до -3,8.
+      </div>
+      <div id="zemlja" class="divPlanets" hidden>
+        Земља је трећа планета по удаљености од Сунца и једина позната планета у
+        свемиру на којој постоји живот. Према радиометријском рачунању и другим
+        изворима доказа, Земља се формирала пре више од 4,5 милијарди година,
+        што је утврђено одређивањем времена полураспада урана и торијума. Време
+        полураспада U238 је 4,51 × 109 година, а Th232 је 1,39 × 1010година.
+        Гравитација Земље међусобно делује са другим објектима у свемиру,
+        посебно са Сунцем и Месецом, јединим природним сателитом Земље, који је
+        почео да кружи око Земље пре 4,53 милијарди година.
+      </div>
+      <div id="mars" class="divPlanets" hidden>
+        Марс је четврта планета по удаљености од Сунца и друга најмања у
+        Сунчевом систему, након Меркура. Добила је име по римском богу рата —
+        Марсу. Такође се назива и „Црвеном планетом”, јер на површини
+        преовладава гвожђе(III) оксид који планети даје црвенкасту боју. Марс је
+        терестричка планета са танком атмосфером, и површинским одликама које
+        подсећају на Месец — ударни кратери, и на Земљу — вулканске купе,
+        долине, пустиње и поларне ледене капе. Период ротације и годишња доба на
+        Марсу су такође слична онима на Земљи, а сличан је и нагиб осе ротације
+        планете који условљава годишња доба.
+      </div>
+    </div>
+
+    <footer class="footer">
+      © Copyright - 2019 -
+      <a class="itpLink" href="index.html">
+        Интернет технологије и програмирање
+      </a>
+    </footer>
+  </body>
+</html>
