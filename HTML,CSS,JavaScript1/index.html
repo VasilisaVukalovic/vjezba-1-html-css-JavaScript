@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ITP prvi kolokvijum – Sunčev sistem</title>
+    <!--naslov pod a-->
+    <link rel="stylesheet" href="zadatak.css" />
+    <script src="zadatak.js"></script>
+  </head>
+  <body>
+    <h1>Sunčev sistem</h1>
+
+    <div class="menuBar">
+      <!cisto da odvajavamo nesto-->
+      <ul class="menuList">
+        <li
+          onmouseover="prikaziElement('zvijezdaDesc')"
+          onmouseout="sakrijElement('zvijezdaDesc')"
+        >
+          Zvijezde
+        </li>
+        <li
+          onclick="window.location='planete.html'"
+          onmouseover="prikaziElement('planeteDesc')"
+          onmouseout="sakrijElement('planeteDesc')"
+        >
+          Planete
+        </li>
+        <li
+          onmouseover="prikaziElement('asteroidiDesc')"
+          onmouseout="sakrijElement('asteroidiDesc')"
+        >
+          Asteroidi
+        </li>
+      </ul>
+    </div>
+
+    <br />
+    <!--razmak izmedju slike i liste-->
+
+    <div class="slikaBox">
+      <!-- div za sliku-->
+      <img
+        class="slika"
+        src="img/SolarSystem.png"
+        title="Sunčev sistem"
+        alt="Sunčev sistem"
+      />
+    </div>
+
+    <div id="zvijezdaDesc" class="desc">
+      <!-- pod e da se prikaye kad misem prelayimo listu
+    treba nam js tako da bi mogli sakriti ovo-->
+      <b>Звијезда</b> небеско је тело које зрачи сопственом светлошћу.
+      Сфероидног је облика, а у стању плазме (високо јонизованог гаса на великој
+      температури) састоји се највише од водоника и хелијума, и тек малог дела
+      од других елемената. Звезда ствара енергију у свом језгру термонуклеарним
+      реакцијама. Та енергија се преноси у околни простор путем конвекције и
+      <i>електромагнетног</i>
+      зрачења и честица.
+    </div>
+
+    <div id="planeteDesc" class="desc">
+      <b>Планета</b> <i>(„лутајућа звезда”)</i> је небеско тело које се креће
+      елиптичном путањом око звезде. За разлику од звезда, планете немају
+      властити извор енергије, тј. у њиховој унутрашњости не долази до нуклеарне
+      фузије. Будући да постоји мноштво тела која круже око звезда, планетама
+      сматрамо само оне значајнијих маса. Око планета круже мања тела која
+      називамо месецима, пратиоцима или природним сателитима.
+    </div>
+
+    <div id="asteroidiDesc" class="desc">
+      <b>Астероиди</b> или <b>планетоиди</b> су камена или метална небеска тела
+      пречника већег од 1 метар, који самостално или у групи сличних тела
+      обилазе око Сунца. Већина планетоида обилази Сунце у главном планетоидном
+      појасу (астероидни појас) између Марса и Јупитера, део прилази Сунцу ближе
+      од Марса (Амори) и Земље (Аполони) и називају се Земљи блиски астероиди,
+      део се креће на путањи Јупитера или других планета (Тројанци).
+    </div>
+
+    <footer class="footer">
+      <!--pod f-->
+      © Copyright - 2019 -
+      <a class="itpLink" href="index.html">
+        Интернет технологије и програмирање
+      </a>
+    </footer>
+  </body>
+</html>
